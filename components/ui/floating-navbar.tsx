@@ -41,6 +41,15 @@ export const FloatingNav = ({
     }
   });
 
+  const smoothScroll = (e: React.MouseEvent, targetId: string) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+    return false;
+  }
+
   return (
     <AnimatePresence mode="wait">
       <motion.div
@@ -67,6 +76,7 @@ export const FloatingNav = ({
             className={cn(
               "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
             )}
+            onClick={(e) => smoothScroll(e, navItem.link.replace('#', ''))}
           >
             <span className="block">{navItem.icon}</span>
             <span className="text-sm ">{navItem.name}</span>

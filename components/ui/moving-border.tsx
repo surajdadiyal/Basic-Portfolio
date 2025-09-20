@@ -22,7 +22,6 @@ export function Button({
 }: {
   borderRadius?: string;
   children: React.ReactNode;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   as?: any;
   containerClassName?: string;
   borderClassName?: string;
