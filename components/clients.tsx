@@ -8,7 +8,7 @@ function Clients() {
         <div className='py-20' id='testimonials'>
             <h2 className='font-bold text-4xl md:text-5xl text-center'>
                 Kind words from {" "}
-                <span className='text-purple-300'>satisfied clients</span>
+                <span className='text-purple-300'>satisfied clients.</span>
             </h2>
             <div className='flex flex-col items-center max-lg:mt-10'>
                 <InfiniteMovingCards
